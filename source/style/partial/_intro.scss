@@ -1,0 +1,65 @@
+.intro-text {
+    background-color: #ffe300;
+    padding: 37px 30px;
+}
+    .intro-text__title {
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        &::after {
+            content: "";
+            background-color:  #353535;
+            display: block;
+            height: 5px;
+            margin: 18px 0 0 0;
+            width: 40px;
+        }
+    }
+
+    .intro-text__text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 17px;
+        margin-bottom: 0;
+    }
+
+    .intro-text__link {
+        background-color: #353535;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 34px;
+        padding: 18px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #fff;
+            color: #282828;
+        }
+    }
+
+.intro-video {
+    background: url("images/video-play.png") center / 15% no-repeat;
+    background-color: #2196d8;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "COMPANY VIDEO";
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top: 70%;
+    }
+}
+
+    .intro-video__video {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
