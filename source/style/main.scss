@@ -1,4 +1,4 @@
-
+@import "partial/_normalize.scss";
 
 body, html {
   margin: 0;
@@ -8,11 +8,14 @@ body, html {
 }
 
 body {
-    background-color: #fff;
-    color: #000;
+    background-color: #f5f5f5;
+    color: #363636;
     font-family: "Montserrat", sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
+
+@import "partial/_sprite.scss";
+@import "partial/_header.scss";
