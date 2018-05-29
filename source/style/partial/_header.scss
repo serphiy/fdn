@@ -1,0 +1,52 @@
+.page-header {
+    padding: 30px 30px;
+}
+
+.logo {
+    display: inline-block;
+    height: 83px;
+    width: 83px;
+    position: relative;
+}
+
+    .logo-img {
+        display: inline-block;
+        height: 83px;
+        width: 83px;
+        background-image: url("images/logo.png");
+        position: absolute;
+    }
+
+    .logo-text {
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 25px;
+        right: -2px;
+    }
+
+.short-menu {
+    display: inline-block;
+    font-size: 22px;
+}
+    .short-menu__link {
+        display: inline-block;
+        padding: 20px;
+        color: #fff;
+        line-height: 22px;
+        text-decoration: none;
+    }
+
+    .cart {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        @include sprite($icon-cart);
+    }
+
+    .menu-icon {
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        @include sprite($icon-menu);
+    }
