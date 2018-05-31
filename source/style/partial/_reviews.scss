@@ -1,0 +1,37 @@
+.review-card {
+    background-color: #fff;
+    padding: 30px 30px;
+    text-align: center;
+}
+
+    .review-card__img {
+        display: inline-block;
+    }
+
+    .review-card__title {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 12px auto;
+    }
+
+    .review-card__star {
+        display: inline-block;
+        margin-right: 1px;
+        text-align: center;
+    }
+
+        .review-card__star_full {
+            @include sprite($icon-star-full);
+        }
+
+        .review-card__star_empty {
+            @include sprite($icon-star-empty);
+        }
+
+    .review-card__text {
+        font-size: 14px;
+        line-height: 22px;
+        color: #a0a0a0;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
