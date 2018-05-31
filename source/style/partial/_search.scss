@@ -20,6 +20,7 @@
         color: #fff;
         display: inline-block;
         font-size: 18px;
+        outline: none;
         padding: 15px 0;
         padding-right: 18px + 2*5px + 10px;
         vertical-align: bottom;
@@ -27,6 +28,9 @@
         &::placeholder {
             color: #fff;
             opacity: 1;
+        }
+        &:active, &:focus {
+            border-color: #ffe300;
         }
     }
 
