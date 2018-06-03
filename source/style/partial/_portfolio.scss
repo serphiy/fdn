@@ -1,0 +1,48 @@
+.portfolio-slide__caption {
+    background-color: #fff;
+    padding: 30px 30px 25px 30px;
+}
+
+    .portfolio-slide__title {
+        font-size: 28px;
+        font-weight: bold;
+        &::after {
+            content: "";
+            background-color:  #353535;
+            display: block;
+            height: 5px;
+            margin: 18px 0 0 0;
+            width: 40px;
+        }
+    }
+
+    .portfolio-slide__p {
+        color: #9b9b9b;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 17px;
+        margin-bottom: 10;
+    }
+
+    .portfolio-slide__link {
+        background-color:  #ffe300;
+        color: #363636;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 25px;
+        padding: 18px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            background-color:#353535;
+            color: #fff;
+        }
+    }
+
+.portfolio-slide__img {
+    display: inline-block;
+    width: 100%;
+}
+
+
