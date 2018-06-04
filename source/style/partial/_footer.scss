@@ -1,0 +1,36 @@
+.page-footer {
+    color: #9b9b9b;
+    font-size: 12px;
+    padding: 3px 15px;
+}
+
+.page-footer-copy {
+    padding: 15px 15px;
+}
+
+    .page-footer-copy__link {
+        color: #2197d7;
+        text-decoration: none;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
+
+.page-footer__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+    .page-footer__item {
+        display: inline-block;
+    }
+    .page-footer__link {
+        color: #9b9b9b;
+        display: inline-block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        &:hover, &:active {
+            color: #2197d7;
+        }
+    }
