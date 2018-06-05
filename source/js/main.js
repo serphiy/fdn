@@ -1,12 +1,18 @@
 $(document).ready(function(){
   $('.page-intro__carousel').on('init', function(event, slick){
-      $('.page-intro__current-number').text(parseInt(slick.currentSlide + 1).toString().padStart(2, "0"));
-      $('.page-intro__total-number').text('/' + slick.slideCount.toString().padStart(2, "0"));
+    var carouselControls = $('.page-intro__controls');
+    carouselControls.find('.carousel-numbers__current-number')
+                    .text(parseInt(slick.currentSlide + 1).toString().padStart(2, "0"));
+    carouselControls.find('.carousel-numbers__total-number')
+                    .text('/' + slick.slideCount.toString().padStart(2, "0"));
   });
 
   $('.page-intro__carousel').on('afterChange', function(event, slick, currentSlide){
-      $('.page-intro__current-number').text(parseInt(slick.currentSlide + 1).toString().padStart(2, "0"));
-      $('.page-intro__total-number').text('/' + slick.slideCount.toString().padStart(2, "0"));
+    var carouselControls = $('.page-intro__controls');
+    carouselControls.find('.carousel-numbers__current-number')
+                    .text(parseInt(slick.currentSlide + 1).toString().padStart(2, "0"));
+    carouselControls.find('.carousel-numbers__total-number')
+                    .text('/' + slick.slideCount.toString().padStart(2, "0"));
   });
   $('.page-intro__carousel').slick({
       arrows: true,
