@@ -67,3 +67,76 @@
         width: 100%;
         z-index: 1;
     }
+
+.page-intro__controls {
+    background-color: #ffffff;
+    min-width: 293px;
+    max-height: 293px;
+    padding: 30px 30px;
+    text-align: center;
+    .slick-prev,
+    .slick-next {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 28px+20px*2;
+        width: 28px+20px*2;
+        line-height: 0px;
+        font-size: 0px;
+        cursor: pointer;
+        background: transparent;
+        color: transparent;
+        padding: 0 20px;
+        border: none;
+        outline: none;
+        text-align: center;
+        position: relative;
+        &:hover, &:focus {
+            outline: none;
+            background: transparent;
+            color: transparent;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 22px;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .slick-prev {
+        &:before {
+            @include sprite($icon-arrow);
+        }
+        &:hover:before, &:focus:before {
+            @include sprite($icon-arrow-hover);
+        }
+    }
+    .slick-next {
+        &:before {
+            @include sprite($icon-arrow);
+            transform: rotate(180deg);
+        }
+        &:hover:before, &:focus:before {
+            @include sprite($icon-arrow-hover);
+            transform: rotate(180deg);
+        }
+    }
+}
+
+    .page-intro__numbers {
+        color: #363636;
+        font-size: 36px;
+        letter-spacing: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 20px;
+        vertical-align: top;
+    }
+        .page-intro__numbers_index {
+            font-size: 24px;
+            vertical-align: top;
+        }
