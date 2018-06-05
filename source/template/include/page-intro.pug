@@ -22,6 +22,18 @@ section#page-intro.page-intro
                     | Your browser does not support the video tag.
                     a(href="") Download
                     | the video instead.
+        .page-intro__slide
+            .intro-text
+                h2.intro-text__title Lorem ipsum dolor sit amet
+                p.intro-text__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam saepe sapiente inventore praesentium veniam quam, maiores cum pariatur provident.
+                a(href="#").intro-text__link READ MORE
+            .intro-video
+                video.intro-video__video(preload="none")
+                    source(src="" type="")
+                    | Your browser does not support the video tag.
+                    a(href="") Download
+                    | the video instead.
     .page-intro__controls
-        .page-intro__numbers 01
-            span.page-intro__numbers_index /03
+        .page-intro__numbers
+            span.page-intro__current-number 01
+            span.page-intro__total-number /01
