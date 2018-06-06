@@ -1,6 +1,16 @@
 .page-header {
     background-color: #292929;
-    padding: 30px 30px;
+    height: 83px;
+    min-width: 230px;
+    padding: 30px 10px 30px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -8,19 +18,18 @@
     height: 83px;
     width: 83px;
     position: relative;
+    flex: 0 0 auto;
 }
 
     .logo-img {
         display: inline-block;
         height: 83px;
         width: 83px;
-        // background-image: url("images/logo.png");
         background-image: url("images/logo-light.png");
         position: absolute;
     }
 
     .logo-text {
-        // color: #363636;
         color: #fff;
         font-size: 28px;
         font-weight: bold;
@@ -32,12 +41,15 @@
 .short-menu {
     display: inline-block;
     font-size: 22px;
+    text-align: center;
+    vertical-align: top;
 }
     .short-menu__link {
         display: inline-block;
         padding: 20px;
         color: #fff;
         line-height: 22px;
+        min-width: 22px;
         text-decoration: none;
         &:hover, &:active {
             background-color: #363636;
@@ -57,3 +69,15 @@
         top: 3px;
         @include sprite($icon-menu);
     }
+
+@media screen and (min-width: 586px) {
+    .page-header {
+        background-color: transparent;
+    }
+    .logo-img {
+        background-image: url("images/logo.png");
+    }
+    .logo-text {
+        color: #363636;
+    }
+}
