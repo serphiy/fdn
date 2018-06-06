@@ -1,7 +1,7 @@
 .carousel-controls {
     background-color: #ffffff;
-    min-width: 293px;
-    max-height: 293px;
+    min-width: 200px;
+    max-height: 233px;
     padding: 30px 30px;
     text-align: center;
     .slick-prev,
@@ -41,7 +41,7 @@
         &:before {
             @include sprite($icon-arrow);
         }
-        &:hover:before, &:focus:before {
+        &:hover:before, &:active:before {
             @include sprite($icon-arrow-hover);
         }
     }
@@ -50,7 +50,7 @@
             @include sprite($icon-arrow);
             transform: rotate(180deg);
         }
-        &:hover:before, &:focus:before {
+        &:hover:before, &:active:before {
             @include sprite($icon-arrow-hover);
             transform: rotate(180deg);
         }
