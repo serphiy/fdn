@@ -102,6 +102,9 @@
 
     .page-intro__slide {
         padding-top: 143px;
+        & > * {
+            transition: opacity 0.9s ease;
+        }
     }
         .page-intro__slide_1st {
             background: url("images/intro-carousel-bg-1.png") center / cover no-repeat;
