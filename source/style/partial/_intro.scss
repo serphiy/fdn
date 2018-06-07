@@ -1,11 +1,11 @@
-.page-intro {
-    padding-top: 143px;
+.page-intro__slide {
     background-color: #292929;
 }
 
 .intro-text {
     background-color: #ffe300;
-    padding: 37px 30px;
+    max-width: 879px;
+    padding: 30px 30px;
 }
     .intro-text__title {
         font-size: 28px;
@@ -48,10 +48,8 @@
     background-color: #2196d8;
     position: relative;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 500px;
-    max-width: 500px;
+    max-height: 879px;
+    max-width: 879px;
     &::after {
         content: "COMPANY VIDEO";
         color: #fff;
@@ -72,3 +70,134 @@
         width: 100%;
         z-index: 1;
     }
+
+.page-intro__controls {
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+    & > * {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 586px) {
+    .intro-text {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: calc((100% - 30px * 2) / 2) // for ratio width:heigh = 2:1
+        }
+    }
+    .intro-video {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+    }
+
+    .page-intro__slide {
+        padding-top: 143px;
+    }
+        .page-intro__slide_1st {
+            background: url("images/intro-carousel-bg-1.png") center / cover no-repeat;
+        }
+        .page-intro__slide_2nd {
+            background: url("images/intro-carousel-bg-2.png") center / cover no-repeat;
+        }
+        .page-intro__slide_3d {
+            background: url("images/intro-carousel-bg-1.png") center / cover no-repeat;
+        }
+
+    .intro-text {
+        grid-area: intro-text;
+    }
+    .intro-video {
+        grid-area: intro-video;
+    }
+
+    .page-intro__slide.slick-slide {
+        display: grid;
+        grid-template-columns: 3.0928% repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            ". intro-text intro-text "
+            ". .          intro-video";
+    }
+    .page-intro__slide[aria-hidden="true"] > * {
+        opacity: 0;
+    }
+
+    .page-intro__carousel .slick-list {
+        padding: 0 3% 0 0;
+    }
+
+    .page-intro__carousel {
+        grid-area: carousel;
+    }
+
+    .page-intro {
+        display: grid;
+        grid-template-columns: 3% repeat(2, 47%) 3%;
+        grid-template-rows: 143px repeat(2, 1fr);
+        grid-template-areas:
+            "carousel carousel carousel carousel"
+            "carousel carousel carousel carousel"
+            "carousel carousel carousel carousel";
+    }
+}
+
+@media screen and (min-width: 879px) {
+    .page-intro__slide.slick-slide {
+        grid-template-columns: 5.2632% repeat(3, 1fr);
+        grid-template-areas:
+            ". intro-text intro-text .          "
+            ". .          .          intro-video";
+    }
+
+    .page-intro__carousel .slick-list {
+        padding: 0 5% 0 0;
+    }
+
+    .page-intro__controls {
+        display: block;
+        display: flex;
+        grid-area: 3 / 3 / 4 / span 1;
+    }
+
+    .page-intro {
+        display: grid;
+        grid-template-columns: 5% repeat(3, 30%) 5%;
+        grid-template-areas:
+            "carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel";
+    }
+}
+
+@media screen and (min-width: 1172px) {
+    .page-intro__slide.slick-slide {
+        grid-template-columns: 14.2857% repeat(3, 1fr);
+    }
+    .page-intro__carousel .slick-list {
+        padding: 0 30% 0 0;
+    }
+    .page-intro__controls {
+        grid-area: 2 / 5 / 3 / span 1;
+    }
+    .page-intro {
+        grid-template-columns: 10% repeat(4, 20%) 10%;
+        grid-template-areas:
+            "carousel carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel carousel";
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+}

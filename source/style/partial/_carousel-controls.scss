@@ -1,9 +1,21 @@
 .carousel-controls {
     background-color: #ffffff;
     min-width: 200px;
-    max-height: 233px;
+    max-width: 586px;
     padding: 30px 30px;
     text-align: center;
+    &::before {
+        content: '';
+        display: table;
+        float: left;
+        height: 0;
+        padding-top: 100%; // for ratio width:heigh = 1:1
+    }
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
     .slick-prev,
     .slick-next {
         display: inline-block;
@@ -64,8 +76,7 @@
     letter-spacing: 4px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 20px;
-    vertical-align: top;
+    padding: 27px 27px;
 }
     .carousel-numbers__total-number {
         font-size: 24px;

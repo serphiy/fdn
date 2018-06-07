@@ -3,7 +3,6 @@
     height: 83px;
     min-width: 230px;
     padding: 30px 10px 30px 30px;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -25,7 +24,7 @@
         display: inline-block;
         height: 83px;
         width: 83px;
-        background-image: url("images/logo-light.png");
+        background: url("images/logo-light.png") center / cover no-repeat;
         position: absolute;
     }
 
@@ -73,9 +72,10 @@
 @media screen and (min-width: 586px) {
     .page-header {
         background-color: transparent;
+        position: absolute;
     }
     .logo-img {
-        background-image: url("images/logo.png");
+        background: url("images/logo.png") center / cover no-repeat;
     }
     .logo-text {
         color: #363636;
