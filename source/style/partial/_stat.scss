@@ -47,3 +47,10 @@
     .stat-card__img_managment {
         @include sprite($icon-stat-managment);
     }
+
+@media screen and (min-width: 586px) {
+    .page-stat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
