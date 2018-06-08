@@ -1,10 +1,11 @@
 .services-desc {
     background-color: #fff;
-    padding: 37px 30px;
+    padding: 30px 30px;
 }
     .services-desc__title {
         font-size: 28px;
         font-weight: bold;
+        max-width: 586px;
         text-transform: uppercase;
         &::after {
                 content: "";
@@ -19,6 +20,7 @@
     .services-desc__text {
         font-size: 14px;
         line-height: 22px;
+        max-width: 586px;
         color: #A0A0A0;
         margin-top: 17px;
         margin-bottom: 0;
@@ -31,12 +33,13 @@
 .services-card__img {
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 586px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .services-card__desc {
+    max-width: 586px;
     padding: 37px 30px;
 }
 
@@ -60,3 +63,112 @@
         margin-top: 17px;
         margin-bottom: 0;
     }
+
+.services-controls {
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+    & > * {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 586px) {
+    .services-controls {
+        display: block;
+        display: flex;
+    }
+    .services-desc{
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+    }
+    .services-card {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 50%; // for ratio width:heigh = 2:1
+        }
+        display: grid;
+        grid-template-columns: 0 1fr 1fr;
+    }
+    .services-card:nth-child(2) {
+        .services-card__img  { order: 3; }
+        .services-card__desc { order: 2; }
+    }
+
+    .services-desc     {grid-area: desc;}
+    .services-carousel {grid-area: carousel;}
+    .services-controls {grid-area: controls;}
+    .page-services {
+        display: grid;
+        grid-template-columns: 3% repeat(2, 47%) 3%;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas:
+            ". desc     controls ."
+            ". carousel carousel ."
+    }
+}
+
+@media screen and (min-width: 879px) {
+    .services-card:nth-child(1) {grid-area: first;}
+    .services-card:nth-child(2) {grid-area: second;}
+    .services-card:nth-child(3) {grid-area: third;}
+    .services-carousel__slide.slick-slide {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "first first second"
+            "third third second"
+    }
+
+    .services-card:nth-child(2) {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 200%; // for ratio width:heigh = 1:2
+            grid-area: 1 / 1 / 3 / 1;
+        }
+        grid-template-columns: 0 1fr;
+        grid-template-rows: 1fr 1fr;
+        .services-card__img  { order: 2; }
+        .services-card__desc { order: 3; }
+    }
+    .services-card:nth-child(3) {
+        .services-card__img  { order: 3; }
+        .services-card__desc { order: 2; }
+    }
+
+    .page-services {
+        grid-template-columns: 5% repeat(3, 30%) 5%;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+            ". desc     .        controls ."
+            ". carousel carousel carousel .";
+    }
+}
+
+@media screen and (min-width: 1172px) {
+    .page-services {
+        grid-template-columns: 4% repeat(4, 23%) 4%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            ". desc     carousel carousel carousel ."
+            ". controls carousel carousel carousel .";
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .page-services {
+        grid-template-columns: 19.4792% repeat(4, 15.2604%) 19.4792%;
+    }
+}
