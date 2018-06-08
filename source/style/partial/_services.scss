@@ -114,6 +114,28 @@
             ". desc     controls ."
             ". carousel carousel ."
     }
+
+    // Triangels
+    .services-card__desc {
+        position: relative;
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            position: absolute;
+            top: calc(50% - 12px);
+        }
+    }
+    .services-card:nth-child(1) > .services-card__desc::after,
+    .services-card:nth-child(3) > .services-card__desc::after, {
+        border-right-color: #fff;
+        left: -24px;
+    }
+    .services-card:nth-child(2) > .services-card__desc::after, {
+        border-left-color: #fff;
+        right: -24px;
+    }
 }
 
 @media screen and (min-width: 879px) {
@@ -154,6 +176,20 @@
         grid-template-areas:
             ". desc     .        controls ."
             ". carousel carousel carousel .";
+    }
+
+    // Triangels
+    .services-card:nth-child(2) > .services-card__desc::after, {
+        border-left-color: transparent;
+        border-bottom-color: #fff;
+        top: -24px;
+        left: calc(50% - 12px);
+    }
+    .services-card:nth-child(3) > .services-card__desc::after, {
+        border-right-color: transparent;
+        border-left-color: #fff;
+        left: unset;
+        right: -24px;
     }
 }
 
