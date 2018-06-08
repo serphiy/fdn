@@ -1,0 +1,71 @@
+@media screen and (min-width: 586px) {
+    .page-intro   {grid-area: intro;}
+    .page-services     {grid-area: services;}
+    .page-price-list   {grid-area: price-list;}
+    .page-contact-us   {grid-area: contact-us;}
+    .page-search       {grid-area: search;}
+    .page-review       {grid-area: review;}
+    .page-news         {grid-area: news;}
+    .page-about        {grid-area: about;}
+    .page-stat         {grid-area: stat;}
+    .page-portfolio    {grid-area: portfolio;}
+    .page-work-with-us {grid-area: work-with-us;}
+    .page-subscribe    {grid-area: subscribe;}
+
+    .page-news {grid-area: 7 / 2 / span 1 / span 1;}
+    main {
+        display: grid;
+        grid-template-columns: 3% repeat(2, 47%) 3%;
+        grid-template-areas:
+            "intro        intro        intro        intro"
+            ".            services     services     ."
+            ".            price-list   contact-us   ."
+            ".            search       search       ."
+            ".            review       review       ."
+            ".            review       review       ."
+            ".            review       review       ."
+            ".            about        about        ."
+            ".            stat         stat         ."
+            ".            portfolio    portfolio    ."
+            ".            work-with-us subscribe    .";
+    }
+}
+
+@media screen and (min-width: 879px) {
+    .page-news {grid-area: 4 / 4 / span 1 / span 1;}
+    main {
+        grid-template-columns: 5% repeat(3, 30%) 5%;
+        grid-template-areas:
+            "intro        intro        intro        intro        intro"
+            ".            services     services     services     ."
+            ".            price-list   contact-us   search       ."
+            ".            review       review       review       ."
+            ".            review       review       review       ."
+            ".            about        about        .            ."
+            ".            stat         stat         work-with-us ."
+            ".            stat         stat         subscribe    ."
+            ".            portfolio    portfolio    portfolio    .";
+    }
+}
+
+@media screen and (min-width: 1172px) {
+    .page-news {grid-area: 6 / 2 / span 1 / span 1;}
+    main {
+        grid-template-columns: 4% repeat(4, 23%) 4%;
+        grid-template-areas:
+            "intro        intro        intro        intro        intro        intro"
+            ".            services     services     services     services     ."
+            ".            price-list   contact-us   search       search       search"
+            ".            review       review       about        about        ."
+            ".            review       review       stat         stat         ."
+            ".            review       review       stat         stat         ."
+            ".            portfolio    portfolio    portfolio    work-with-us ."
+            ".            portfolio    portfolio    portfolio    subscribe    .";
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main {
+        grid-template-columns: 19.4792% repeat(4, 15.2604%) 19.4792%;
+    }
+}
