@@ -108,11 +108,12 @@
     .services-controls {grid-area: controls;}
     .page-services {
         display: grid;
-        grid-template-columns: 3% repeat(2, 47%) 3%;
+        // grid-template-columns: 3% repeat(2, 47%) 3%;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr 3fr;
         grid-template-areas:
-            ". desc     controls ."
-            ". carousel carousel ."
+            "desc     controls"
+            "carousel carousel"
     }
 
     // Triangels
@@ -171,11 +172,12 @@
     }
 
     .page-services {
-        grid-template-columns: 5% repeat(3, 30%) 5%;
+        // grid-template-columns: 5% repeat(3, 30%) 5%;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 2fr;
         grid-template-areas:
-            ". desc     .        controls ."
-            ". carousel carousel carousel .";
+            "desc     .        controls"
+            "carousel carousel carousel";
     }
 
     // Triangels
@@ -195,16 +197,17 @@
 
 @media screen and (min-width: 1172px) {
     .page-services {
-        grid-template-columns: 4% repeat(4, 23%) 4%;
+        // grid-template-columns: 4% repeat(4, 23%) 4%;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            ". desc     carousel carousel carousel ."
-            ". controls carousel carousel carousel .";
+            "desc     carousel carousel carousel"
+            "controls carousel carousel carousel";
     }
 }
 
-@media screen and (min-width: 1920px) {
-    .page-services {
-        grid-template-columns: 19.4792% repeat(4, 15.2604%) 19.4792%;
-    }
-}
+// @media screen and (min-width: 1920px) {
+//     .page-services {
+//         grid-template-columns: 19.4792% repeat(4, 15.2604%) 19.4792%;
+//     }
+// }
