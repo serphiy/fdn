@@ -184,16 +184,16 @@
 
 @media screen and (min-width: 1172px) {
     .page-intro__slide.slick-slide {
-        grid-template-columns: 14.2857% repeat(3, 1fr);
+        grid-template-columns: 5.4795% repeat(3, 1fr);
     }
     .page-intro__carousel .slick-list {
-        padding: 0 30% 0 0;
+        padding: 0 27% 0 0;
     }
     .page-intro__controls {
         grid-area: 2 / 5 / 3 / span 1;
     }
     .page-intro {
-        grid-template-columns: 10% repeat(4, 20%) 10%;
+        grid-template-columns: 4% repeat(4, 23%) 4%;
         grid-template-areas:
             "carousel carousel carousel carousel carousel carousel"
             "carousel carousel carousel carousel carousel carousel"
@@ -202,5 +202,17 @@
 }
 
 @media screen and (min-width: 1920px) {
-
+    .page-intro__slide.slick-slide {
+        grid-template-columns: 29.8484% repeat(3, 1fr);
+    }
+    .page-intro__carousel .slick-list {
+        padding: 0 34.7396% 0 0;
+    }
+    .page-intro {
+        grid-template-columns: 19.4792% repeat(4, 15.2604%) 19.4792%;
+        grid-template-areas:
+            "carousel carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel carousel"
+            "carousel carousel carousel carousel carousel carousel";
+    }
 }
