@@ -97,6 +97,7 @@
         }
         display: grid;
         grid-template-columns: 0 1fr 1fr;
+        align-items: center;
     }
     .services-card:nth-child(2) {
         .services-card__img  { order: 3; }
