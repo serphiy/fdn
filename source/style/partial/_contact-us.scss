@@ -22,3 +22,25 @@
             @include sprite($icon-contact-hover);
         }
     }
+
+@media screen and (min-width: 586px) {
+    .page-contact-us {
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        &::before {
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+    }
+    .page-contact-us__link {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
