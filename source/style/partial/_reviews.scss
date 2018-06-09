@@ -35,3 +35,46 @@
         margin-top: 12px;
         margin-bottom: 0;
     }
+
+@media screen and (min-width: 586px) {
+    .review-card:nth-child(1) {grid-area: first;}
+    .review-card:nth-child(2) {grid-area: second;}
+    .review-card:nth-child(3) {grid-area: third;}
+    .page-review {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "first  first"
+            "second second"
+            ".      third";
+    }
+
+    .review-card:nth-child(1),
+    .review-card:nth-child(2) {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: calc((100% - 30px * 2) / 2) // for ratio width:heigh = 2:1
+        }
+    }
+    .review-card:nth-child(3) {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+    }
+}
+
+@media screen and (min-width: 879px) and (max-width: 1171px) {
+    .page-review {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "first  first  ."
+            "second second third";
+    }
+}
