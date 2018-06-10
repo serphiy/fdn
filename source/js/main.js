@@ -47,6 +47,7 @@ $(document).ready(function(){
 
   // pagination
   function pagination(blockSelector) {
+    if($(window).innerWidth() < 586) return;
     var blocks = $(blockSelector).each(function(index, value) {
       $(value).css('position', 'relative');
       $(value).contents().wrapAll('<div class="pagination-content"></div>')
