@@ -34,23 +34,35 @@
         @include sprite($icon-stat-construction);
     }
 
-.stat-card_procurement {
-    background-color: #fff;
-}
-    .stat-card__img_procurement {
-        @include sprite($icon-stat-procurement);
-    }
-
 .stat-card_managment {
-    background: url("images/stat-bg.png") center / cover no-repeat;
+    background-color: #fff;
 }
     .stat-card__img_managment {
         @include sprite($icon-stat-managment);
+    }
+
+.stat-card_procurement {
+    background: url("images/stat-bg.png") center / cover no-repeat;
+}
+    .stat-card__img_procurement {
+        @include sprite($icon-stat-procurement);
     }
 
 @media screen and (min-width: 586px) {
     .page-stat {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
+    .stat-card {
+        &::before {
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+    }
+    .stat-card_managment   {order: 3}
+    .stat-card_procurement {order: 2}
 }

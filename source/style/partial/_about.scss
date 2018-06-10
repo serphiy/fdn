@@ -1,7 +1,7 @@
 .page-about {
     background: url("images/about-bg.png") center / cover no-repeat;
     background-color: #d7d7d7;
-    padding: 35px 30px 50px 30px;
+    padding: 30px 30px 30px 30px;
 }
 
 .page-about__title {
@@ -38,5 +38,17 @@
     &:hover {
         background-color: #ffe300;
         color: #363636;
+    }
+}
+
+@media screen and (min-width: 586px) {
+    .page-about {
+        &::before{
+            content: '';
+            display: table;
+            float: left;
+            height: 0;
+            padding-top: calc((100% - 30px * 2) / 2) // for ratio width:heigh = 2:1
+        }
     }
 }

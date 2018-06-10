@@ -43,6 +43,7 @@
     .page-review {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "first  first"
             "second second"
@@ -73,6 +74,7 @@
 @media screen and (min-width: 879px) and (max-width: 1171px) {
     .page-review {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
             "first  first  ."
             "second second third";
