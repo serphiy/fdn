@@ -50,10 +50,10 @@ $(document).ready(function(){
     if($(window).innerWidth() < 586) return;
     var blocks = $(blockSelector).each(function(index, value) {
       $(value).css('position', 'relative');
-      $(value).contents().wrapAll('<div class="pagination-content"></div>')
+      $(value).contents().wrapAll('<div class="pagination-content"></div>');
       var content = $(value).find('.pagination-content');
       var contentTotalHeight = content.height();
-      var contentViewHeight = content.width() / ((content.width() > 400) ? 2.34:0.9);
+      var contentViewHeight = content.width() / ((content.width() > 400) ? 2.34:1.05);
       content.css('overflow', 'hidden')
              .height(contentViewHeight)
              .after('<div class="pagination-controls"></div>');
