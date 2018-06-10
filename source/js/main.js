@@ -44,4 +44,53 @@ $(document).ready(function(){
         appendArrows: $(carouselSelectors[carousel]).find('.carousel-controls')
     });
   }
+
+  // pagination
+  function pagination(blockSelector) {
+    var blocks = $(blockSelector).each(function(index, value) {
+      $(value).css('position', 'relative');
+      $(value).contents().wrapAll('<div class="pagination-content"></div>')
+      var content = $(value).find('.pagination-content');
+      var contentTotalHeight = content.height();
+      var contentViewHeight = content.width() / ((content.width() > 400) ? 2.34:0.9);
+      content.css('overflow', 'hidden')
+             .height(contentViewHeight)
+             .after('<div class="pagination-controls"></div>');
+      var emptyContentSpace = contentViewHeight - (contentTotalHeight % contentViewHeight);
+      content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
+      contentTotalHeight += emptyContentSpace;
+      var control = $(value).find('.pagination-controls')
+                            .css({'height': '30px',
+                                  'position': 'absolute',
+                                  'bottom': '0',
+                                  'left': '0',
+                                  'right': '0'
+                                });
+
+      var contentPages = Math.round(contentTotalHeight / contentViewHeight);
+      if (contentPages > 1) {
+        for (var i = 0; i < contentPages; i++) {
+          control.append('<button class="pagination-button"></button>');
+        }
+        var buttons = $(value).find('.pagination-button');
+        buttons.css({
+                      'border': 'none',
+                      'width':  '27px',
+                      'height': '5px',
+                      'background-color': '#353535',
+                      'cursor': 'pointer',
+                      'margin': '5px 5px 20px 5px',
+                      'opacity': '0.5'
+                    });
+        $(buttons[0]).css('opacity', '1');
+        buttons.on('click', function (e) {
+          var buttonInd = buttons.index(e.target);
+          content.scrollTop(buttonInd * contentViewHeight);
+          buttons.css('opacity', '0.5');
+          $(buttons[buttonInd]).css('opacity', '1');
+        });
+      }
+    });
+  }
+  pagination('.review-card');
 });

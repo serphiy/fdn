@@ -36,6 +36,10 @@
         margin-bottom: 0;
     }
 
+.review-card__marked {
+    background-color: #fcf3d3;
+}
+
 @media screen and (min-width: 586px) {
     .review-card:nth-child(1) {grid-area: first;}
     .review-card:nth-child(2) {grid-area: second;}
