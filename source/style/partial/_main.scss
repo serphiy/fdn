@@ -1,5 +1,5 @@
-@media screen and (min-width: 586px) {
-    .page-intro   {grid-area: intro;}
+@media screen and (min-width: 620px) {
+    .page-intro        {grid-area: intro;}
     .page-services     {grid-area: services;}
     .page-price-list   {grid-area: price-list;}
     .page-contact-us   {grid-area: contact-us;}
@@ -31,7 +31,7 @@
     }
 }
 
-@media screen and (min-width: 879px) {
+@media screen and (min-width: 940px) {
     .page-news {grid-area: 4 / 4 / span 1 / span 1;}
     main {
         grid-template-columns: 5% repeat(3, 30%) 5%;
@@ -48,7 +48,7 @@
     }
 }
 
-@media screen and (min-width: 1172px) {
+@media screen and (min-width: 1270px) {
     .page-news {grid-area: 6 / 2 / span 1 / span 1;}
     main {
         grid-template-columns: 4% repeat(4, 23%) 4%;

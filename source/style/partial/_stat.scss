@@ -48,7 +48,7 @@
         @include sprite($icon-stat-procurement);
     }
 
-@media screen and (min-width: 586px) {
+@media screen and (min-width: 620px) {
     .page-stat {
         display: grid;
         grid-template-columns: 1fr 1fr;

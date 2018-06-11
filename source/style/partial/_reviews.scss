@@ -40,7 +40,7 @@
     background-color: #fcf3d3;
 }
 
-@media screen and (min-width: 586px) {
+@media screen and (min-width: 620px) {
     .review-card:nth-child(1) {grid-area: first;}
     .review-card:nth-child(2) {grid-area: second;}
     .review-card:nth-child(3) {grid-area: third;}
@@ -75,7 +75,7 @@
     }
 }
 
-@media screen and (min-width: 879px) and (max-width: 1171px) {
+@media screen and (min-width: 940px) and (max-width: 1270px) {
     .page-review {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(2, 1fr);

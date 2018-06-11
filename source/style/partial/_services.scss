@@ -73,7 +73,7 @@
     }
 }
 
-@media screen and (min-width: 586px) {
+@media screen and (min-width: 620px) {
     .services-controls {
         display: block;
         display: flex;
@@ -139,7 +139,7 @@
     }
 }
 
-@media screen and (min-width: 879px) {
+@media screen and (min-width: 940px) {
     .services-card:nth-child(1) {grid-area: first;}
     .services-card:nth-child(2) {grid-area: second;}
     .services-card:nth-child(3) {grid-area: third;}
@@ -194,7 +194,7 @@
     }
 }
 
-@media screen and (min-width: 1172px) {
+@media screen and (min-width: 1270px) {
     .page-services {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;

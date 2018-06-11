@@ -58,7 +58,7 @@ $(document).ready(function(){
 
   // pagination
   function pagination(blockSelector) {
-    if($(window).innerWidth() < 586) return;
+    if($(window).innerWidth() < 620) return;
     var blocks = $(blockSelector).each(function(index, value) {
       $(value).css('position', 'relative');
       $(value).contents().wrapAll('<div class="pagination-content"></div>');
@@ -72,11 +72,11 @@ $(document).ready(function(){
       content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
       contentTotalHeight += emptyContentSpace;
       var control = $(value).find('.pagination-controls')
-                            .css({'height': '30px',
+                            .css({'height':   '30px',
                                   'position': 'absolute',
-                                  'bottom': '0',
-                                  'left': '0',
-                                  'right': '0'
+                                  'bottom':   '0',
+                                  'left':     '0',
+                                  'right':    '0'
                                 });
 
       var contentPages = Math.round(contentTotalHeight / contentViewHeight);

@@ -84,7 +84,7 @@
     }
 }
 
-@media screen and (min-width: 586px) {
+@media screen and (min-width: 620px) {
     .intro-text {
         &::before{
             content: '';
@@ -158,7 +158,7 @@
     }
 }
 
-@media screen and (min-width: 879px) {
+@media screen and (min-width: 940px) {
     .page-intro__slide.slick-slide {
         grid-template-columns: 5.2632% repeat(3, 1fr);
         grid-template-areas:
@@ -186,7 +186,7 @@
     }
 }
 
-@media screen and (min-width: 1172px) {
+@media screen and (min-width: 1270px) {
     .page-intro__slide.slick-slide {
         grid-template-columns: 5.4795% repeat(3, 1fr);
     }
