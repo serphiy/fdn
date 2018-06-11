@@ -64,7 +64,7 @@ $(document).ready(function(){
       $(value).contents().wrapAll('<div class="pagination-content"></div>');
       var content = $(value).find('.pagination-content');
       var contentTotalHeight = content.height();
-      var contentViewHeight = content.width() / ((content.width() > 400) ? 2.34:1.05);
+      var contentViewHeight = content.width() / ((content.width() > 500) ? 2.34:1.05);
       content.css('overflow', 'hidden')
              .height(contentViewHeight)
              .after('<div class="pagination-controls"></div>');
@@ -105,4 +105,5 @@ $(document).ready(function(){
     });
   }
   pagination('.review-card');
+  pagination('.portfolio-slide__desc');
 });

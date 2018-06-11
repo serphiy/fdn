@@ -1,6 +1,7 @@
 .portfolio-slide__caption {
     background-color: #fff;
     padding: 30px 30px 30px 30px;
+    position: relative;
 }
 
     .portfolio-slide__title {
@@ -16,12 +17,16 @@
         }
     }
 
+    .portfolio-slide__desc {
+        padding: 20px 0 50px 0;
+    }
+
     .portfolio-slide__p {
         color: #9b9b9b;
         font-size: 14px;
         line-height: 22px;
-        margin-top: 17px;
-        margin-bottom: 10;
+        margin-top: 0;
+        margin-bottom: 28px;
     }
 
     .portfolio-slide__link {
@@ -34,6 +39,9 @@
         padding: 18px 20px;
         text-decoration: none;
         text-transform: uppercase;
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
         &:hover {
             background-color:#353535;
             color: #fff;
