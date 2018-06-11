@@ -1,6 +1,7 @@
 .page-footer {
     color: #9b9b9b;
     font-size: 12px;
+    min-height: 80px;
     padding: 3px 15px;
 }
 
@@ -22,7 +23,7 @@
     padding: 0;
 }
     .page-footer__item {
-        display: inline-block;
+        display: block;
     }
     .page-footer__link {
         color: #9b9b9b;
@@ -34,3 +35,25 @@
             color: #2197d7;
         }
     }
+
+@media screen and (min-width: 586px) {
+    .page-footer__item {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1172px) {
+    .page-footer-copy {
+        display: inline-block;
+        order: 1;
+    }
+    .page-footer__list {
+        display: inline-block;
+        order: 2;
+    }
+    .page-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
