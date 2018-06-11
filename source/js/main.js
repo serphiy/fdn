@@ -45,6 +45,17 @@ $(document).ready(function(){
     });
   }
 
+  // news carousel
+  $('.news-carousel').slick({
+      arrows: false,
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: false,
+      appendDots: $('.page-news')
+  });
+
   // pagination
   function pagination(blockSelector) {
     if($(window).innerWidth() < 586) return;
