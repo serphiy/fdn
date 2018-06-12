@@ -64,7 +64,7 @@
         text-align: center;
         text-transform: uppercase;
         position: absolute;
-        top: 70%;
+        top: 80%;
     }
 }
 
@@ -95,12 +95,15 @@
         }
     }
     .intro-video {
-        &::before{
+        &::before {
             content: '';
             display: table;
             float: left;
             height: 0;
             padding-top: 100%; // for ratio width:heigh = 1:1
+        }
+        &::after {
+            top: 70%;
         }
     }
 
