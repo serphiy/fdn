@@ -57,20 +57,22 @@ $(document).ready(function(){
   });
 
   // pagination
-  function pagination(blockSelector) {
+  function pagination(blockSelector, lineHeight, linesNumber) {
     if($(window).innerWidth() < 620) return;
     var blocks = $(blockSelector).each(function(index, value) {
       $(value).css('position', 'relative');
       $(value).contents().wrapAll('<div class="pagination-content"></div>');
       var content = $(value).find('.pagination-content');
       var contentTotalHeight = content.height();
-      var contentViewHeight = content.width() / ((content.width() > 500) ? 2.34:1.05);
+      contentViewHeight = lineHeight * linesNumber;
       content.css('overflow', 'hidden')
              .height(contentViewHeight)
              .after('<div class="pagination-controls"></div>');
       var emptyContentSpace = contentViewHeight - (contentTotalHeight % contentViewHeight);
-      content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
-      contentTotalHeight += emptyContentSpace;
+      if (emptyContentSpace + lineHeight < contentViewHeight) {
+        content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
+        contentTotalHeight += emptyContentSpace;
+      }
       var control = $(value).find('.pagination-controls')
                             .css({'height':   '30px',
                                   'position': 'absolute',
@@ -104,6 +106,6 @@ $(document).ready(function(){
       }
     });
   }
-  pagination('.review-card');
-  pagination('.portfolio-slide__desc');
+  pagination('.review-card', 22, 10);
+  pagination('.portfolio-slide__desc', 22, 14);
 });

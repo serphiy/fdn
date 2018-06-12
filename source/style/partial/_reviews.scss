@@ -11,7 +11,11 @@
     .review-card__title {
         font-size: 14px;
         font-weight: bold;
-        margin: 12px auto;
+        margin: 14px auto 14px auto;
+    }
+
+    .review-card__rating {
+        min-height: 20px;
     }
 
     .review-card__star {
@@ -33,7 +37,6 @@
         line-height: 22px;
         color: #a0a0a0;
         margin-top: 12px;
-        margin-bottom: 0;
     }
 
 .review-card__marked {
