@@ -73,12 +73,37 @@
 @media screen and (min-width: 620px) {
     .page-header {
         background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
         position: absolute;
+        left: 3%;
+        right: 3%;
     }
     .logo-img {
         background: url("images/logo.png") center / cover no-repeat;
     }
     .logo-text {
         color: #363636;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .page-header {
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media screen and (min-width: 1270px) {
+    .page-header {
+        left: 4%;
+        right: 4%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .page-header {
+        left: 19.4792%;
+        right: 19.4792%;
     }
 }
