@@ -65,24 +65,23 @@ $(document).ready(function(){
       var content = $(value).find('.pagination-content');
       var contentTotalHeight = content.height();
       contentViewHeight = lineHeight * linesNumber;
-      content.css('overflow', 'hidden')
-             .height(contentViewHeight)
-             .after('<div class="pagination-controls"></div>');
       var emptyContentSpace = contentViewHeight - (contentTotalHeight % contentViewHeight);
       if (emptyContentSpace + lineHeight < contentViewHeight) {
         content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
         contentTotalHeight += emptyContentSpace;
       }
-      var control = $(value).find('.pagination-controls')
-                            .css({'height':   '30px',
-                                  'position': 'absolute',
-                                  'bottom':   '0',
-                                  'left':     '0',
-                                  'right':    '0'
-                                });
-
       var contentPages = Math.round(contentTotalHeight / contentViewHeight);
       if (contentPages > 1) {
+        content.css('overflow', 'hidden')
+               .height(contentViewHeight)
+               .after('<div class="pagination-controls"></div>');
+        var control = $(value).find('.pagination-controls')
+                              .css({'height':   '30px',
+                                    'position': 'absolute',
+                                    'bottom':   '0',
+                                    'left':     '0',
+                                    'right':    '0'
+                                  });
         for (var i = 0; i < contentPages; i++) {
           control.append('<button class="pagination-button"></button>');
         }
@@ -106,6 +105,6 @@ $(document).ready(function(){
       }
     });
   }
-  pagination('.review-card', 22, 10);
+  pagination('.review-card', 23, 10);
   pagination('.portfolio-slide__desc', 22, 14);
 });
