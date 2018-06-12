@@ -7,5 +7,24 @@ header#page-header.page-header
         a(href="#").fab.fa-twitter.short-menu__link
         a(href="#").short-menu__link
             span.cart
+                span.cart__amount 99
         a(href="#").short-menu__link
             span.menu-icon
+    .cart-menu
+        ul.cart-menu__list
+            li.cart-menu__item
+                img(src="img/cart-item.png" alt="Drill for Real").cart-menu__img
+                .cart-menu__desc
+                    a(href="#").cart-menu__link Drill for Real
+                    .cart-menu__amount 1&times; $59.00
+            li.cart-menu__item
+                img(src="img/cart-item.png" alt="Drill Mrill Brill").cart-menu__img
+                .cart-menu__desc
+                    a(href="#").cart-menu__link Drill Mrill Brill
+                    .cart-menu__amount 1&times; $29.00
+        .cart-menu__sum
+            span.cart-menu__subtotal-name Subtotal:
+            span.cart-menu__subtotal-sum  $259.00
+        .cart-menu__action
+            button.cart-menu__checkout CHECKOUT
+            a(href="#").cart-menu__cart VIEW CART
