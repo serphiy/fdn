@@ -1,3 +1,22 @@
+(function openCartMenu() {
+    var cartIcon = document.querySelector('#cart-icon');
+    var cartMenu = document.querySelector('#cart-menu');
+    var body = document.querySelector('body');
+
+    cartIcon.addEventListener('click', function(e) {
+        cartMenu.classList.toggle('cart-menu_open');
+        e.stopPropagation();
+    });
+    body.addEventListener('click', function() {
+        cartMenu.classList.remove('cart-menu_open');
+    });
+    cartMenu.addEventListener('click', function(e) {
+        if ((e.target.tagName != 'A') && (e.target.tagName != 'BUTTON')) {
+            e.stopPropagation();
+        }
+    });
+})();
+
 $(document).ready(function(){
   // carousels
   var carouselSelectors = {
