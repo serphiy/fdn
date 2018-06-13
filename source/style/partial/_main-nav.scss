@@ -1,0 +1,148 @@
+.main-menu {
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.22);
+    min-height: 100%;
+    min-width: 200px;
+    max-width: 310px;
+    padding: 30px 30px;
+    position: absolute;
+    top: 0;
+    right: -390px;
+    transition: right 0.3s ease;
+    z-index: 10001;
+}
+
+.main-menu.main-menu_open {
+    right: 0;
+}
+
+    .main-menu__title {
+        color: #363636;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+
+    .main-menu__close {
+        display: inline-block;
+        position: absolute;
+        top: 55px;
+        right: 30px;
+        @include sprite($icon-menu-close);
+    }
+
+    .main-menu-list {
+        color: #a0a0a0;
+        font-size: 16px;
+        line-height: 40px;
+        list-style-type: none;
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .menu-services {
+        border-top: 1px solid #e5e5e5;
+        list-style-type: none;
+        margin: 0 0;
+        padding: 10px 0 10px 25px;
+    }
+
+    .main-menu-list__item {
+        display: block;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .main-menu-list__link {
+        color:  #a0a0a0;
+        display: inline-block;
+        text-decoration: none;
+        &:hover, &:active {
+            color: #2297d8;
+        }
+    }
+
+    .main-menu-list__link_active {
+        color: #2297d8;
+    }
+
+    .contacts {
+        color: #a0a0a0;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 60px;
+    }
+
+    .contacts__map-marker {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 15px 0;
+    }
+
+    .contacts__phone {
+        margin-top: 30px;
+    }
+
+    .contacts__work-hours {
+        margin-top: 10px;
+    }
+
+    .contacts__email {
+        color: #2297d8;
+        display: block;
+        margin-top: 10px;
+        text-decoration: underline;
+    }
+
+    .menu-search {
+        display: block;
+        margin-top: 80px;
+        position: relative;
+        width: 100%;
+    }
+
+    .menu-search__input-text {
+        background-color: transparent;
+        border: 1px solid #e6e6e6;
+        box-sizing: border-box;
+        color: #a0a0a0;
+        display: inline-block;
+        font-size: 16px;
+        padding: 13px 18px + 2*5px + 10px 13px 10px;
+        vertical-align: bottom;
+        width: 100%;
+        &::placeholder {
+            color: #a0a0a0;
+            font-size: 16px;
+            opacity: 1;
+        }
+    }
+
+    .menu-search__submit-wrapper {
+        background-color: transparent;
+        color: #a0a0a0;
+        display: inline-block;
+        font-size: 20px;
+        padding: 13px 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        vertical-align: bottom;
+    }
+
+        .menu-search__submit {
+            background: transparent;
+            border: none;
+            background-color: transparent;
+            color: transparent;
+            cursor: pointer;
+            display: inline-block;
+            line-height: 0px;
+            font-size: 0px;
+            width: 20px + 2*10px;
+            height: 20px + 2*13px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            vertical-align: bottom;
+        }

@@ -17,6 +17,29 @@
     });
 })();
 
+(function openMainMenu() {
+    var menuIcon = document.querySelector('#main-menu-icon');
+    var mainMenu = document.querySelector('#main-menu');
+    var closeIcon = document.querySelector('#main-menu__close');
+    var body = document.querySelector('body');
+
+    menuIcon.addEventListener('click', function(e) {
+        mainMenu.classList.toggle('main-menu_open');
+        e.stopPropagation();
+    });
+    closeIcon.addEventListener('click', function() {
+        mainMenu.classList.remove('main-menu_open');
+    });
+    body.addEventListener('click', function() {
+        mainMenu.classList.remove('main-menu_open');
+    });
+    mainMenu.addEventListener('click', function(e) {
+        if ((e.target.tagName != 'A') && (e.target.tagName != 'INPUT')) {
+            e.stopPropagation();
+        }
+    });
+})();
+
 $(document).ready(function(){
   // carousels
   var carouselSelectors = {

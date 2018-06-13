@@ -11,6 +11,7 @@ body {
     background-color: #f5f5f5;
     color: #363636;
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -22,6 +23,7 @@ h1, h2, h3, h4, h5 {
 @import "partial/_sprite.scss";
 @import "partial/_carousel-controls.scss";
 
+@import "partial/_main-nav.scss";
 @import "partial/_header.scss";
 @import "partial/_main.scss";
 @import "partial/_intro.scss";
