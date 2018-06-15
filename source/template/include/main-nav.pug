@@ -5,18 +5,28 @@ nav.main-menu#main-menu
         li.main-menu-list__item
             a.main-menu-list__link(href="#page-header") Home
         li.main-menu-list__item
-            a.main-menu-list__link.main-menu-list__link_active(href="#page-services") Services
-            ul.menu-services
+            a.main-menu-list__link.accordion(href="#page-services") Services
+            ul.submenu.accordion-panel
+                li.submenu__item
+                    a(href="#page-services").submenu__link.main-menu-list__link General contracting
                 li.menu-services__item
-                    a(href="#page-services").menu-services__link.main-menu-list__link General contracting
+                    a(href="#page-services").submenu__link.main-menu-list__link Project design and engineering
                 li.menu-services__item
-                    a(href="#page-services").menu-services__link.main-menu-list__link Project design and engineering
-                li.menu-services__item
-                    a(href="#page-services").menu-services__link.main-menu-list__link Capital improvements
+                    a(href="#page-services").submenu__link.main-menu-list__link Capital improvements
         li.main-menu-list__item
-            a.main-menu-list__link(href="#page-portfolio") Our Works
+            a.main-menu-list__link.accordion(href="#page-portfolio") Our Works
+            ul.submenu.accordion-panel
+                li.menu-works__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
+                li.menu-works__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
         li.main-menu-list__item
-            a.main-menu-list__link(href="#page-news") News &amp; events
+            a.main-menu-list__link.accordion(href="#page-news") News &amp; events
+            ul.submenu.accordion-panel
+                li.menu-news__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
+                li.menu-works__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
         li.main-menu-list__item
             a.main-menu-list__link(href="#page-work-with-us") Work with us
         li.main-menu-list__item
@@ -24,7 +34,12 @@ nav.main-menu#main-menu
         li.main-menu-list__item
             a.main-menu-list__link(href="#page-contact-us") Contact us
         li.main-menu-list__item
-            a.main-menu-list__link(href="#") Shop
+            a.main-menu-list__link.accordion(href="#") Shop
+            ul.submenu.accordion-panel
+                li.menu-shop__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
+                li.menu-works__item
+                    a(href="#").submenu__link.main-menu-list__link Lorem ipsum dolor sit
     .contacts
         .contacts__map-marker.fas.fa-map-marker
         .contacts__address Stlemixthemes USA, Callifornia 20, Firs Avenue, 2365 Callifornia

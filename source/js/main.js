@@ -5,6 +5,7 @@
 
     cartIcon.addEventListener('click', function(e) {
         cartMenu.classList.toggle('cart-menu_open');
+        e.preventDefault();
         e.stopPropagation();
     });
     body.addEventListener('click', function() {
@@ -25,19 +26,40 @@
 
     menuIcon.addEventListener('click', function(e) {
         mainMenu.classList.toggle('main-menu_open');
+        e.preventDefault();
         e.stopPropagation();
     });
-    closeIcon.addEventListener('click', function() {
+    closeIcon.addEventListener('click', function(e) {
         mainMenu.classList.remove('main-menu_open');
+        e.preventDefault();
+        e.stopPropagation();
     });
     body.addEventListener('click', function() {
         mainMenu.classList.remove('main-menu_open');
     });
     mainMenu.addEventListener('click', function(e) {
-        if ((e.target.tagName != 'A') && (e.target.tagName != 'INPUT')) {
+        if ((e.target.tagName != 'A') || (e.target.tagName != 'INPUT')) {
             e.stopPropagation();
         }
     });
+})();
+
+(function accordion() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener('click', function(e) {
+        this.classList.toggle('accordion_active');
+        var panel = this.nextElementSibling;
+        panel.classList.toggle('accordion-panel_active');
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    }
 })();
 
 $(document).ready(function(){
