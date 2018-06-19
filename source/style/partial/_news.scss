@@ -2,6 +2,7 @@
     background-color: #2197d7;
     color: #fff;
     padding: 30px 30px;
+    padding-bottom: 60px;
     position: relative;
 }
 
@@ -103,6 +104,7 @@
 
 @media screen and (min-width: 620px) {
     .page-news {
+        padding-bottom: 30px;
         &::before {
             content: '';
             display: table;
