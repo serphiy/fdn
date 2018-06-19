@@ -130,7 +130,7 @@ $(document).ready(function(){
       var contentTotalHeight = content.height();
       contentViewHeight = lineHeight * linesNumber;
       var emptyContentSpace = contentViewHeight - (contentTotalHeight % contentViewHeight);
-      if (emptyContentSpace + lineHeight < contentViewHeight) {
+      if ((emptyContentSpace + lineHeight < contentViewHeight) && (contentTotalHeight > contentViewHeight)) {
         content.append('<div style="height:' + emptyContentSpace + 'px"></div>');
         contentTotalHeight += emptyContentSpace;
       }
