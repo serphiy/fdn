@@ -51,19 +51,19 @@
     }
     .slick-prev {
         &:before {
-            @include sprite($icon-arrow);
+            @include retina-sprite($icon-arrow-group);
         }
         &:hover:before, &:active:before {
-            @include sprite($icon-arrow-hover);
+            @include retina-sprite($icon-arrow-hover-group);
         }
     }
     .slick-next {
         &:before {
-            @include sprite($icon-arrow);
+            @include retina-sprite($icon-arrow-group);
             transform: rotate(180deg);
         }
         &:hover:before, &:active:before {
-            @include sprite($icon-arrow-hover);
+            @include retina-sprite($icon-arrow-hover-group);
             transform: rotate(180deg);
         }
     }

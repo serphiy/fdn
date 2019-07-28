@@ -45,7 +45,7 @@
 
 .intro-video {
     background-color: #2196d8;
-    background-image: url("images/video-play.png");
+    background-image: url("../img/video-play.png");
     background-position: center;
     background-size: 25%;
     background-repeat: no-repeat;
@@ -114,13 +114,13 @@
         }
     }
         .page-intro__slide_1st {
-            background: url("images/intro-carousel-bg-1.png") center / cover no-repeat;
+            background: url("../img/intro-carousel-bg-1.png") center / cover no-repeat;
         }
         .page-intro__slide_2nd {
-            background: url("images/intro-carousel-bg-2.png") center / cover no-repeat;
+            background: url("../img/intro-carousel-bg-2.png") center / cover no-repeat;
         }
         .page-intro__slide_3d {
-            background: url("images/intro-carousel-bg-1.png") center / cover no-repeat;
+            background: url("../img/intro-carousel-bg-1.png") center / cover no-repeat;
         }
 
     .intro-text {

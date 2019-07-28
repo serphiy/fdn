@@ -1,5 +1,5 @@
 .page-search {
-    background: url("images/search-bg.png") center / cover no-repeat;
+    background: url("../img/search-bg.png") center / cover no-repeat;
     background-color: #292929;
     color: #fff;
     padding: 30px 30px;
@@ -11,7 +11,13 @@
     position: relative;
     width: 100%;
 }
-
+    .page-search__input-label {
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 0px;
+        width: 100%;
+        vertical-align: bottom;
+    }
     .page-search__input-text {
         background-color: transparent;
         border: none;
@@ -51,6 +57,7 @@
             background-color: transparent;
             cursor: pointer;
             display: inline-block;
+            font-size: 0px;
             width: 18px + 2*5px;
             height: 18px + 2*15px;
             top: 0;

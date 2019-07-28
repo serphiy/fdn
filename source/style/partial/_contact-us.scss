@@ -12,14 +12,14 @@
             display: block;
             margin: 0 auto 20px auto;
             text-align: center;
-            @include sprite($icon-contact);
+            @include retina-sprite($icon-contact-group);
         }
         &:hover {
             background-color: #ffe300;
             color: #363636;
         }
         &:hover::before {
-            @include sprite($icon-contact-hover);
+            @include retina-sprite($icon-contact-hover-group);
         }
     }
 

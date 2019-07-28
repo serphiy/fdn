@@ -25,10 +25,11 @@
 
     .main-menu__close {
         display: inline-block;
+        font-size: 0px;
         position: absolute;
         top: 55px;
         right: 30px;
-        @include sprite($icon-menu-close);
+        @include retina-sprite($icon-menu-close-group);
     }
 
     .main-menu-list {
@@ -67,7 +68,7 @@
         position: relative;
         &::after {
             content: '';
-            @include sprite($icon-arrow-nav);
+            @include retina-sprite($icon-arrow-nav-group);
             display: inline-block;
             position: absolute;
             right: 5px;
@@ -133,7 +134,13 @@
         position: relative;
         width: 100%;
     }
-
+    .menu-search__input-label {
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 0px;
+        vertical-align: bottom;
+        width: 100%;
+    }
     .menu-search__input-text {
         background-color: transparent;
         border: 1px solid #e6e6e6;

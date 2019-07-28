@@ -1,4 +1,4 @@
-@import "partial/_normalize.scss";
+@import "partial/_normalize";
 
 body, html {
   margin: 0;
@@ -18,24 +18,25 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
-@import "partial/_lib.scss";
+@import "partial/_lib";
 
-@import "partial/_sprite.scss";
-@import "partial/_carousel-controls.scss";
+@import "partial/_sprite";
+@include retina-sprites($retina-groups);
+@import "partial/_carousel-controls";
 
-@import "partial/_main-nav.scss";
-@import "partial/_header.scss";
-@import "partial/_main.scss";
-@import "partial/_intro.scss";
-@import "partial/_services.scss";
-@import "partial/_price-list.scss";
-@import "partial/_contact-us.scss";
-@import "partial/_search.scss";
-@import "partial/_reviews.scss";
-@import "partial/_news.scss";
-@import "partial/_about.scss";
-@import "partial/_stat.scss";
-@import "partial/_portfolio.scss";
-@import "partial/_work-with-us.scss";
-@import "partial/_subscribe.scss";
-@import "partial/_footer.scss";
+@import "partial/_main-nav";
+@import "partial/_header";
+@import "partial/_main";
+@import "partial/_intro";
+@import "partial/_services";
+@import "partial/_price-list";
+@import "partial/_contact-us";
+@import "partial/_search";
+@import "partial/_reviews";
+@import "partial/_news";
+@import "partial/_about";
+@import "partial/_stat";
+@import "partial/_portfolio";
+@import "partial/_work-with-us";
+@import "partial/_subscribe";
+@import "partial/_footer";

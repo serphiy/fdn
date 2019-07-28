@@ -21,7 +21,13 @@
 .page-subscribe__form {
     text-align: right;
 }
-
+    .page-subscribe__label {
+        box-sizing: border-box;
+        display: block;
+        font-size: 0px;
+        vertical-align: bottom;
+        width: 100%;
+    }
     .page-subscribe__field {
         background-color: #fff;
         border: 1px solid transparent;

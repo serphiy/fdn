@@ -25,11 +25,11 @@
     }
 
         .review-card__star_full {
-            @include sprite($icon-star-full);
+            @include retina-sprite($icon-star-full-group);
         }
 
         .review-card__star_empty {
-            @include sprite($icon-star-empty);
+            @include retina-sprite($icon-star-empty-group);
         }
 
     .review-card__text {

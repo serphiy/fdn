@@ -24,28 +24,28 @@
     background-color: #fff;
 }
     .stat-card__img_expert {
-        @include sprite($icon-stat-expert);
+        @include retina-sprite($icon-stat-expert-group);
     }
 
 .stat-card_construction {
-    background: url("images/stat-bg.png") center / cover no-repeat;
+    background: url("../img/stat-bg.png") center / cover no-repeat;
 }
     .stat-card__img_construction {
-        @include sprite($icon-stat-construction);
+        @include retina-sprite($icon-stat-construction-group);
     }
 
 .stat-card_managment {
     background-color: #fff;
 }
     .stat-card__img_managment {
-        @include sprite($icon-stat-managment);
+        @include retina-sprite($icon-stat-managment-group);
     }
 
 .stat-card_procurement {
-    background: url("images/stat-bg.png") center / cover no-repeat;
+    background: url("../img/stat-bg.png") center / cover no-repeat;
 }
     .stat-card__img_procurement {
-        @include sprite($icon-stat-procurement);
+        @include retina-sprite($icon-stat-procurement-group);
     }
 
 @media screen and (min-width: 620px) {
