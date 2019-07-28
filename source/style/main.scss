@@ -1,17 +1,18 @@
 @import "partial/_normalize";
 
 body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 body {
     background-color: #f5f5f5;
     color: #363636;
     font-family: "Montserrat", sans-serif;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
